@@ -7,6 +7,8 @@ export default function TaskForm({ onClick }) {
 
   const handleclick = () => {
     onClick(description, taskState);
+    setDescription('');
+    setTaskState('');
   };
 
   return (
