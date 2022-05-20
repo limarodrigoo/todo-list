@@ -11,11 +11,11 @@ class TasksService {
 
   deleteByTaskId = async (id) => this.prisma.task.delete({ where: { id } });
 
-  createTask = async (description, state, userId) => this.prisma.task.create({
+  createTask = async (description, state) => this.prisma.task.create({
     data: {
       description,
       state,
-      userId,
+      // userId, implement userFeature
     },
   });
 

@@ -38,8 +38,8 @@ class UserController {
 
   create = async (req, res, next) => {
     try {
-      const { description, state, userId } = req.body;
-      const result = this.tasksService.createTask(description, state, +userId);
+      const { description, state } = req.body;
+      const result = this.tasksService.createTask(description, state);
       return res.status(StatusCodes.OK).json({ message: result });
     } catch (e) {
       next(e);

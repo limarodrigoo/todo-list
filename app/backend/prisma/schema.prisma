@@ -15,7 +15,8 @@ model User {
   user     String @unique
   email    String @unique
   password String
-  tasks    Task[]
+  // implement user feature
+  // tasks    Task[]
 }
 
 model Task {
@@ -23,6 +24,7 @@ model Task {
   state       String
   description String
   createdAt DateTime @default(now())
-  user      User   @relation(fields: [userId], references: [id])
-  userId        Int
+  // implement user feature
+  // user      User   @relation(fields: [userId], references: [id])
+  // userId        Int
 }
